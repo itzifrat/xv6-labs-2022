@@ -17,6 +17,28 @@
 // prints "OK".
 //
 
+int
+main(int argc, char *argv[])
+{
+  if (argc != 3) {
+    printf("Usage: setprio <pid> <newprio>\n");
+    exit(1);
+  }
+
+  int pid = atoi(argv[1]);
+  int newprio = atoi(argv[2]);
+
+  int old = setpriority(pid, newprio);
+  if (old != 1) {
+    printf("Success: priority of PID %d changed from %d to %d\n", pid, old, newprio);
+  } else {
+    printf("Failure: could not change priority of PID %d to %d\n", pid, newprio);
+  }
+  exit(0);
+}
+
+
+
 #define BUFSZ  ((MAXOPBLOCKS+2)*BSIZE)
 
 char buf[BUFSZ];
