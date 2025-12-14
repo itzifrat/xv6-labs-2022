@@ -102,7 +102,7 @@ extern uint64 sys_link(void);
 extern uint64 sys_mkdir(void);
 extern uint64 sys_close(void);
 
-// kernel/syscall.c (add these externs near other sys externs)
+
 extern uint64 sys_setpriority(void);
 extern uint64 sys_setpname(void);
 extern uint64 sys_filesize(void);

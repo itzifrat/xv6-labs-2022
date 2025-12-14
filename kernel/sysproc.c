@@ -111,9 +111,9 @@ sys_setpriority(void)
     return 1;
 
   struct proc *p;
-  // iterate process table - use global 'proc' array in xv6-labs
+ 
   for (p = proc; p < &proc[NPROC]; p++) {
-    // no lock needed just to read pid/priority in this simplified lab
+  
     if (p->pid == pid) {
       int old = p->priority;
       p->priority = newprio;

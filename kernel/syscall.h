@@ -21,7 +21,7 @@
 #define SYS_mkdir  20
 #define SYS_close  21
 
-// kernel/syscall.h  (add new syscall numbers)
+
 #define SYS_setpriority  22
 #define SYS_setpname     23
 #define SYS_filesize     24
